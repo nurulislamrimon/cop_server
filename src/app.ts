@@ -2,6 +2,7 @@ import express from "express";
 import cookieParser from "cookie-parser";
 import { errorHandler, routeNotFoundError } from "./middlewares/errorHandler";
 import { config } from "./config";
+import router from "./router/router";
 
 const app = express();
 
@@ -14,9 +15,7 @@ app.use(cookieParser(config.cookieSecret));
 app.use(express.static("./public"));
 
 // routes
-app.get("/", (req, res) => {
-  res.send("hello");
-});
+app.use(router);
 
 // route not found error handlers
 app.use(routeNotFoundError);
