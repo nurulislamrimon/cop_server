@@ -1,9 +1,9 @@
 {
-    "extends": ["eslint:recommended"],
-    "parserOptions": {
+  "extends": ["eslint:recommended"],
+  "parserOptions": {
     "ecmaVersion": 2021
-    },
-    "rules": {
-        
-    }
-   }
+  },
+  "rules": {
+    "semi": "warn"
+  }
+}

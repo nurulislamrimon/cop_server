@@ -1,2 +1,8 @@
-console.log("hello");
-console.log("hello");
+import app from "./app";
+import { config } from "./config";
+
+(() => {
+  app.listen(config.PORT, () => {
+    console.log(`App is listening at port: ${config.PORT}`);
+  });
+})();
