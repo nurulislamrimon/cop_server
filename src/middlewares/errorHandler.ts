@@ -1,6 +1,6 @@
 import { ErrorRequestHandler, RequestHandler } from "express";
 import { IErrorMessage } from "../interfaces/error.interface";
-import ApiError from "../utils/common/ApiError";
+import ApiError from "../Errors/ApiError";
 import { StatusCodes } from "http-status-codes";
 import { config } from "../config";
 
