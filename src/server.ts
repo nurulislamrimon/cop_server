@@ -2,7 +2,7 @@ import app from "./app";
 import { config } from "./config";
 
 (() => {
-  app.listen(config.PORT, () => {
-    console.log(`App is listening at port: ${config.PORT}`);
+  app.listen(config.port, () => {
+    console.log(`App is listening at port: ${config.port}`);
   });
 })();
