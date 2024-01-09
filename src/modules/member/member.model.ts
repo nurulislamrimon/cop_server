@@ -1,12 +1,12 @@
 import mongoose from "mongoose";
-import IUser from "./user.interface";
-import { memberCopIdMaxLength } from "./user.constants";
+import IMember from "./member.interface";
+import { memberCopIdMaxLength } from "./member.constants";
 import { validateMemberCopId } from "../../utils/common/validateCopId";
 import validator from "validator";
 
 const bloodGroupEnum = ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"];
 
-const userSchema = new mongoose.Schema<IUser>(
+const memberSchema = new mongoose.Schema<IMember>(
   {
     copId: {
       type: String,
@@ -55,13 +55,13 @@ const userSchema = new mongoose.Schema<IUser>(
     joiningData: { type: Date, required: true },
     addedBy: {
       type: mongoose.Types.ObjectId,
-      ref: "User",
+      ref: "Member",
       required: true,
     },
   },
   { timestamps: true }
 );
 
-const User = mongoose.model<IUser>("User", userSchema);
+const Member = mongoose.model<IMember>("Member", memberSchema);
 
-export default User;
+export default Member;

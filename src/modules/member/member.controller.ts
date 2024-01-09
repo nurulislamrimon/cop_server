@@ -4,12 +4,12 @@ import { StatusCodes } from "http-status-codes";
 
 // internal imports
 import sendResponse from "../../utils/common/sendResponse";
-import userServices from "./user.service";
-import IUser from "./user.interface";
+import memberServices from "./member.service";
+import IMember from "./member.interface";
 
-const getAllUserController: RequestHandler = async (req, res, next) => {
-  const result = await userServices.getAllUserService();
-  sendResponse<IUser[]>(res, {
+const getAllMemberController: RequestHandler = async (req, res, next) => {
+  const result = await memberServices.getAllMemberService();
+  sendResponse<IMember[]>(res, {
     success: true,
     status: StatusCodes.OK,
     message: "Members data retrived",
@@ -17,6 +17,4 @@ const getAllUserController: RequestHandler = async (req, res, next) => {
   });
 };
 
-export default {
-  getAllUserController,
-};
+export default { getAllMemberController };

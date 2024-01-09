@@ -1,6 +1,6 @@
-import mongoose, { Document } from "mongoose";
+import mongoose from "mongoose";
 
-interface IUser {
+interface IMember {
   copId: string;
   name: string;
   mobile: string;
@@ -15,4 +15,4 @@ interface IUser {
     type: mongoose.Types.ObjectId;
   };
 }
-export default IUser;
+export default IMember;
