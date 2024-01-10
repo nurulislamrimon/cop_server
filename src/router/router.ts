@@ -6,7 +6,7 @@ const router = express.Router();
 
 const allRoutes = [
   {
-    path: "/user",
+    path: "/members",
     element: memberRouter,
   },
   {
